@@ -1,0 +1,36 @@
+services:
+  hive:
+     servers:
+        - jdbc:hive2://cdh-01.drr.go.th:10000/pook
+     config: 
+        query_limit: 25    
+     username: hive
+     password: hive    
+     driver: org.apache.hive.jdbc.HiveDriver
+  kafka:
+     ddsdemo:    
+       bootstrapservers: 192.168.157.156:9092
+       topic:
+         name:
+            user: "DDS_USER.dbo.USER"    
+spring: 
+   mvc: 
+      view:
+         prefix: /WEB-INF/
+         suffix: .jsp
+                  
+dds:
+  domain:
+    id: 0
+  topic:
+    name:
+      user: "User Topic"
+ 
+  qosprofile:
+    file: file:///opt/rti_connext_dds-6.0.1/resource/xml/DSTD_QOS_PROFILES.xml
+  profile:
+    lib:
+      name: Default_Library
+    name: Reliable
+
+       

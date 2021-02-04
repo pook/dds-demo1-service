@@ -1,0 +1,7 @@
+struct DDSUser{
+	long userId; //@Key
+	string<255> userFname;
+	string<255> userLName;
+	long age;
+	string<255> address; 
+};
