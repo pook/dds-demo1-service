@@ -14,8 +14,13 @@
              
             <form:label path="userLName">นามสกุล:</form:label>
             <form:input path="userLName"/><br/>
+              <form:label path="userId">id:</form:label>
+            <form:input path="userId"/><br/>
              
-           
+            <form:label path="age">อายุ:</form:label>
+            <form:input path="age"/><br/>
+            <form:label path="address">ที่อยู่:</form:label>
+            <form:input path="address"/><br/>
                  
             <form:button>Register</form:button>
         </form:form>
