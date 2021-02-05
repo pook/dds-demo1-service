@@ -29,7 +29,7 @@ public class WelcomeController {
 	@RequestMapping(value="/welcome", method=RequestMethod.POST)
 	public String  welcome(ModelMap model, @ModelAttribute("user")User user) {
 //		logger.info(fname);
-		logger.info("cccc"+user.getUserFname());
+//		logger.info("Write User Name:"+user.getUserFname());
 		userPublisher.write(user);
 		return "welcome";
 	}

@@ -48,7 +48,7 @@ public class UserPublisherImpl implements UserPublisher{
 
 	@Override
 	public void write(User publish) {
-		logger.info("User ID: " + publish.getUserId());
+		logger.info("Write User ID: " + publish.getUserId()+" User Name: ");
 		DDSUser dds = DDSUser.createInstance(publish);
 		try {
 			((DDSUserDataWriter) dataWriter).write(dds, InstanceHandle_t.HANDLE_NIL);
